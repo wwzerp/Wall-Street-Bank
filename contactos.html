@@ -3,112 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacte a Apex Capital</title>
-    <style>
-        body { font-family: 'Arial', sans-serif; margin: 0; background-color: #1a1a1a; color: #ffffff; }
-        header { background-color: #0d0d0d; padding: 20px; text-align: center; }
-        nav a { color: #cccccc; text-decoration: none; margin: 0 15px; font-weight: bold; }
-        nav a:hover { color: #e5b000; }
-        .content { padding: 40px; max-width: 800px; margin: 0 auto; }
-        footer { background-color: #0d0d0d; color: #cccccc; text-align: center; padding: 20px; margin-top: 50px; }
-        
-        /* Estilo básico de formulário de iniciante */
-        form { background-color: #2a2a2a; padding: 20px; border-radius: 5px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; color: #e5b000; }
-        input[type="text"], input[type="email"], select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #555555;
-            background-color: #3a3a3a;
-            color: #ffffff;
-            box-sizing: border-box; /* Garante que o padding não aumente a largura total */
-        }
-        input[type="submit"] {
-            background-color: #e5b000;
-            color: #1a1a1a;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        input[type="submit"]:hover { background-color: #ffc42b; }
-    </style>
-    
-    <script>
-        function validarFormulario() {
-            var nome = document.getElementById("nome").value;
-            if (nome == "") {
-                alert("Por favor, preencha o seu nome.");
-                return false;
-            }
-            alert("Mensagem enviada com sucesso! A Apex Capital entrará em contacto.");
-            return true;
-        }
-    </script>
+    <title>Contactos | Apex Financial</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <img src="images/logo.png" alt="Logo da Apex Capital" width="150">
-        <h1>Contacte a Nossa Equipa de Investimento</h1>
+        <div class="logo">Apex Financial</div>
         <nav>
-            <a href="index.html">Início</a>
-            <a href="sobre.html">Sobre Nós</a>
-            <a href="contactos.html">Contactos</a>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contactos.html" class="active">Contactos</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main class="content">
-        <section>
-            <h2>Envie uma Mensagem Direta</h2>
-            <p>Preencha o formulário e um dos nossos consultores de Wall Street entrará em contacto dentro de 24h.</p>
-            
-            <form action="/enviar-mensagem" method="POST" onsubmit="return validarFormulario()">
+    <main>
+        <section class="content-grid" style="align-items: start;">
+            <article>
+                <h1>Fale Connosco</h1>
+                <p style="margin-bottom: 30px; color: var(--secondary);">Agende uma consultoria privada com os nossos banqueiros seniores.</p>
                 
-                <label for="nome">Nome Completo:</label>
-                <input type="text" id="nome" name="nome" required> <label for="email">E-mail Profissional:</label>
-                <input type="email" id="email" name="email" required> <label for="assunto">Assunto da Mensagem:</label>
-                <select id="assunto" name="assunto" required>
-                    <option value="">-- Selecione um Assunto --</option>
-                    <option value="investimento">Oportunidades de Investimento</option>
-                    <option value="parceria">Parceria/M&A</option>
-                    <option value="carreira">Carreira na Apex Capital</option>
-                    <option value="outro">Outro</option>
-                </select>
-                
-                <label for="mensagem">Sua Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
-                
-                <input type="submit" value="Enviar para Wall Street">
-            </form>
-        </section>
+                <form action="#" method="post">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: João Silva" required>
 
-        <section style="margin-top: 50px;">
-            <h2>Nossa Localização em Wall Street</h2>
-            
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.520473216892!2d-74.01178332463426!3d40.70600127139369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a16d0000001%3A0x867332c943183597!2sWall%20St%2C%20New%20York%2C%20NY%2010005%2C%20EUA!5e0!3m2!1spt-PT!4spt!5m2!1spt-PT!5m2!1spt-PT" 
-                width="100%" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Localização de Wall Street, Nova Iorque">
-            </iframe>
-            
-            <p style="text-align: center; margin-top: 20px;">
-                <a href="https://linkedin.com/apexcapital" target="_blank" style="color: #e5b000;">LinkedIn Profissional</a> | 
-                <a href="mailto:info@apexcapital.com" style="color: #e5b000;">Email: info@apexcapital.com</a>
-            </p>
-        </section>
+                    <label for="email">Email Corporativo</label>
+                    <input type="email" id="email" name="email" placeholder="nome@empresa.com" required>
 
+                    <label for="investimento">Capital Disponível</label>
+                    <select id="investimento" name="investimento">
+                        <option value="tier1">$1M - $5M</option>
+                        <option value="tier2">$5M - $20M</option>
+                        <option value="tier3">$20M+</option>
+                    </select>
+
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva os seus objetivos financeiros..."></textarea>
+
+                    <button type="submit" class="btn" style="border: none; background: var(--primary); color: black; cursor: pointer; font-weight: bold;">Enviar Pedido</button>
+                </form>
+            </article>
+
+            <aside>
+                <h2>Localização</h2>
+                <address style="font-style: normal; color: var(--secondary); margin-bottom: 20px;">
+                    <strong>Apex Financial Tower</strong><br>
+                    11 Wall Street<br>
+                    New York, NY 10005<br>
+                    United States
+                </address>
+
+                <ul>
+                    <li><strong>Tel:</strong> +1 (212) 555-0199</li>
+                    <li><strong>Email:</strong> private@apex.ny</li>
+                </ul>
+
+                <br>
+                <div style="width: 100%; height: 300px; filter: grayscale(100%) invert(90%);">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.361503216767!2d-74.01322722400566!3d40.70603607139435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a173d139961%3A0x6d3a4072523566e1!2sWall%20St%2C%20New%20York%2C%20NY%2C%20EUA!5e0!3m2!1spt-PT!2spt!4v1715000000000!5m2!1spt-PT!2spt" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </aside>
+        </section>
     </main>
 
     <footer>
-        <p>Apex Capital. Contacte a nossa sede.</p>
-        <p>&copy; 2025 Apex Capital. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Apex Financial Group LLC.</p>
     </footer>
 
 </body>
