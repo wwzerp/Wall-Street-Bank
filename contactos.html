@@ -3,81 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactos | Apex Financial</title>
-    <link rel="stylesheet" href="style.css">
+    <title>NYSE | Contactos</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">Apex Financial</div>
+        <div class="logo">NYSE // CONTACTO</div>
         <nav>
             <ul>
-                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contactos.html" class="active">Contactos</a></li>
+                <li><a href="contactos.html" style="color:#d4af37;">Contactos</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="content-grid" style="align-items: start;">
-            <article>
-                <h1>Fale Connosco</h1>
-                <p style="margin-bottom: 30px; color: var(--secondary);">Agende uma consultoria privada com os nossos banqueiros seniores.</p>
+        <section style="display: flex; gap: 40px; flex-wrap: wrap;">
+            
+            <div style="flex: 1; min-width: 300px;">
+                <h2>Fale Connosco</h2>
+                <p style="margin-bottom: 20px;">Deseja listar a sua empresa ou agendar uma visita? Preencha o formulário abaixo.</p>
                 
-                <form action="#" method="post">
+                <form id="contactForm" action="#" method="post">
                     <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" name="nome" placeholder="Ex: João Silva" required>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: Warren Buffet" required>
 
                     <label for="email">Email Corporativo</label>
                     <input type="email" id="email" name="email" placeholder="nome@empresa.com" required>
 
-                    <label for="investimento">Capital Disponível</label>
-                    <select id="investimento" name="investimento">
-                        <option value="tier1">$1M - $5M</option>
-                        <option value="tier2">$5M - $20M</option>
-                        <option value="tier3">$20M+</option>
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto">
+                        <option value="listar">Listar Empresa (IPO)</option>
+                        <option value="visita">Agendar Visita</option>
+                        <option value="imprensa">Imprensa</option>
                     </select>
 
                     <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva os seus objetivos financeiros..."></textarea>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva a sua mensagem..." required></textarea>
 
-                    <button type="submit" class="btn" style="border: none; background: var(--primary); color: black; cursor: pointer; font-weight: bold;">Enviar Pedido</button>
+                    <button type="submit" class="btn">Enviar Mensagem</button>
                 </form>
-            </article>
+            </div>
 
-            <aside>
+            <aside style="flex: 1; min-width: 300px;">
                 <h2>Localização</h2>
-                <address style="font-style: normal; color: var(--secondary); margin-bottom: 20px;">
-                    <strong>Apex Financial Tower</strong><br>
-                    11 Wall Street<br>
-                    New York, NY 10005<br>
-                    United States
-                </address>
-
-                <ul>
-                    <li><strong>Tel:</strong> +1 (212) 555-0199</li>
-                    <li><strong>Email:</strong> private@apex.ny</li>
-                </ul>
-
+                <p>11 Wall Street, New York, NY 10005</p>
                 <br>
-                <div style="width: 100%; height: 300px; filter: grayscale(100%) invert(90%);">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.361503216767!2d-74.01322722400566!3d40.70603607139435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a173d139961%3A0x6d3a4072523566e1!2sWall%20St%2C%20New%20York%2C%20NY%2C%20EUA!5e0!3m2!1spt-PT!2spt!4v1715000000000!5m2!1spt-PT!2spt" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
-                </div>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.3615738456566!2d-74.01329602427322!3d40.70983283773851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a173d134d91%3A0x87563b3ae6363e91!2sNew%20York%20Stock%20Exchange!5e0!3m2!1spt-PT!2spt!4v1715789000000!5m2!1spt-PT!2spt" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0; filter: grayscale(100%) invert(92%) contrast(83%);" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
             </aside>
+
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Apex Financial Group LLC.</p>
+        <p>&copy; 2024 New York Stock Exchange Project.</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
